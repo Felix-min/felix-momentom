@@ -13,10 +13,20 @@ body {
     height: 100vh;
 }
 
-.geo-area {
+.header-area {
     padding: 30px 20px 0 0;
     text-align: right; 
+}
 
+.image-link {
+    width: 20px;
+    height: 20px;
+    text-decoration: none;
+}
+
+.image-link img {
+    width: 20px;
+    height: 20px;
 }
 
 .local-weather {
@@ -147,8 +157,18 @@ li {
     .container {
         padding-bottom: 3.3333vw;
     }
-    .geo-area {
+    .header-area {
         padding: 2.5vw 1.6667vw 0 0;
+    }
+
+    .image-link {
+        width: 1.6667vw;
+        height: 1.6667vw;
+    }
+    
+    .image-link img {
+        width: 1.6667vw;
+        height: 1.6667vw;
     }
 
     .local-weather {
