@@ -1,11 +1,45 @@
 body {
     font-family: sans-serif;
     position: relative;
-    background-color: aqua;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+    
+}
+
+.image-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.top-area {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.clock-area {
+    position: relative;
 }
 
 h1 {
-    color: blueviolet;
+    margin: 0;
+    padding-top: 200px;
+    color: white;
+    font-size: 80px;
+}
+
+h4 {
+    font-size: 60px;
+    color: whitesmoke;
 }
 
 .showing {
@@ -16,14 +50,20 @@ h1 {
     display: none;
 }
 
-.bgImage {
+.bg-image {
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
-    height: 100vh;
     z-index: -1;
     animation: fadeIn .5s ease-in-out;
+}
+
+.local-weather {
+    font-size: 30px;
+    color: white;
 }
 
 @keyframes  fadeIn {

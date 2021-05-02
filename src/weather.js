@@ -1,4 +1,4 @@
-const weather = document.querySelector('.felix-weather');
+const weather = document.querySelector('.local-weather');
 
 const API_KEY = '78789b85104f423a10f9af91e9565f5e'; //openweathermap.org
 const COORDS = 'coords';

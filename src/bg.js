@@ -1,4 +1,4 @@
-const body = document.querySelector("body");
+const body = document.querySelector(".container");
 
 const IMG_NUMBER = 3;
 
@@ -9,7 +9,7 @@ function handleImgLoad() {
 function paintImage(imageNumber) {
     const image = new Image();
     image.src = `images/${imageNumber + 1}.jpg`
-    image.classList.add("bgImage");
+    image.classList.add("bg-image");
     body.prepend(image);
 }
 

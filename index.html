@@ -7,23 +7,30 @@
     <link rel="stylesheet" href="src/styles.css">
 </head>
 <body>
-    <div class="js-clock">
-        <h1>00:00:00</h1>
+    <div class= "container">
+        <div class="top-area">
+            <div class="clock-area">
+                <h1>00:00:00</h1>
+            </div>
+            <form class="js-form form">
+                <input type="text" placeholder="what is your name?"></input>
+            </form>
+            <h4 class="js-greetings greetings"></h4>
+            <h2>Task</h2>
+            
+            <form class="todo-form">
+                <input type="text" placeholder="Add Task"/>
+            </form>
+            <h2>Pending</h2>
+            <ul class="pending-task-lists"></ul>
+            <h2>Finished</h2>
+            <ul class="finished-task-lists"></ul>
+        </div>
+        <div class="bottom-area">
+            <span class="local-weather"></span>
+        </div>
     </div>
-    <form class="js-form form">
-        <input type="text" placeholder="what is your name?"></input>
-    </form>
-    <h4 class="js-greetings greetings"></h4>
-    <h2>Task</h2>
     
-    <form class="todo-form">
-        <input type="text" placeholder="Add Task"/>
-    </form>
-    <h2>Pending</h2>
-    <ul class="pending-task-lists"></ul>
-    <h2>Finished</h2>
-    <ul class="finished-task-lists"></ul>
-    <span class="felix-weather"></span>
 
     <script src="src/index.js"></script>
     <script src="src/greeting.js"></script>

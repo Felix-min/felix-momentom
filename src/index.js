@@ -2,7 +2,7 @@
 //import "./styles.css";
 // <⚠️ /DONT DELETE THIS ⚠️>
 
-const clockContainer = document.querySelector(".js-clock");
+const clockContainer = document.querySelector(".clock-area");
 const clockTitle = clockContainer.querySelector("h1");
 
 function getTime() {

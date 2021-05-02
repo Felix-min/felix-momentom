@@ -6,15 +6,33 @@ const form = document.querySelector(".js-form"),
 const User_Name = "currentUser",
     SHOWING_ON = "showing";
 
+let greetingText = 'Hello';
     
 function saveName(text) {
     localStorage.setItem(User_Name, text);
 }
 
+function getTime(){
+    const date = new Date();
+    const time = date.getHours;
+    console.log(time);
+
+    if(time >= 4 && time <= 10) {
+        greetingText = 'Good Morning'
+    } else if(time<= 17) {
+        greetingText = 'Good Afternoon'
+    } else if(time <= 20) {
+        greetingText = 'Good Evening'
+    } else {
+        greetingText = 'Good Night'
+    }
+}
+
 function paintGreeting(text) {
     form.classList.remove(SHOWING_ON);
     greeting.classList.add(SHOWING_ON);
-    greeting.innerText = `Hello ${text}`;
+    getTime();
+    greeting.innerText = `${greetingText}, ${text}`;
 }
 
 function handleSubmit(event) {
