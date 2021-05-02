@@ -106,8 +106,8 @@ li {
     list-style: none;
 }
 
-.finished-task-lists li {
-    font-weight: 700;
+.finished-task-lists .text {
+    text-decoration: line-through;
 }
 
 .todo-list {

@@ -20,7 +20,7 @@ function deleteToDosDone(event) {
         return toDoDone.id !== parseInt(li.id);
     });
 
-    console.log(cleanToDosDone);
+    //console.log(cleanToDosDone);
     toDosDone = cleanToDosDone;
     saveToDosDone();
 }
@@ -34,7 +34,7 @@ function deleteToDos(event) {
         return toDo.id !== parseInt(li.id);
     });
 
-    console.log(cleanToDos);
+    //console.log(cleanToDos);
     toDos = cleanToDos;
     saveToDos();
 }
@@ -45,9 +45,9 @@ function saveToDos() {
 
 function backToDos(event) {
     deleteToDosDone(event);
-    console.log(event, event.target.parentNode);
+    //console.log(event, event.target.parentNode);
     let text = event.target.parentNode.innerText;
-    console.log(text);
+    //console.log(text);
     const liTextLength = text.length - 3;
     text = text.slice(0, liTextLength)
     updatePending(text);
@@ -56,7 +56,9 @@ function backToDos(event) {
 function updateDone(text) {
     const newId = toDosDone.length + 1;
     const doneLi = document.createElement('li');
-    doneLi.innerText = text;
+    const textSpan = document.createElement('span');
+    textSpan.classList.add('text');
+    textSpan.innerText = text;
 
     finishedLists.appendChild(doneLi);
     doneLi.id = newId;
@@ -69,6 +71,7 @@ function updateDone(text) {
     doneBtn.innerText = '🔙';
     doneBtn.classList.add('done');
     doneBtn.addEventListener('click', backToDos);
+    doneLi.appendChild(textSpan);
     doneLi.appendChild(deleteBtn);
     doneLi.appendChild(doneBtn);
 
@@ -82,7 +85,7 @@ function updateDone(text) {
 
 function updateDoneToDo(event) {
     deleteToDos(event);
-    console.log(event, event.target.parentNode);
+    //console.log(event, event.target.parentNode);
     let text = event.target.parentNode.innerText;
     const liTextLength = text.length - 2;
     text = text.slice(0, liTextLength)
