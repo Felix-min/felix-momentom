@@ -3,8 +3,8 @@ const weather = document.querySelector('.local-weather');
 const API_KEY = '78789b85104f423a10f9af91e9565f5e'; //openweathermap.org
 const COORDS = 'coords';
 
-function paintWeather(cityName, cityTemp){
-    weather.innerText = cityTemp + "°C @" + cityName ;
+function paintWeather(cityName, cityTemp, cityWeather){
+    weather.innerText = cityWeather + ", " +cityTemp + "°C @" + cityName ;
 }
 
 function getWeather(lat, lon) {
@@ -14,7 +14,7 @@ function getWeather(lat, lon) {
         return response.json();
     })
     .then(function(json){
-        paintWeather(json.name, json.main.temp);
+        paintWeather(json.name, json.main.temp, json.weather[0].description);
     });
 }
 
@@ -23,7 +23,7 @@ function saveCoords(coordsObj) {
 }
 
 function handleGeoSuccess(position) {
-    console.log(position);
+    //console.log(position);
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
     const coordsObj = {

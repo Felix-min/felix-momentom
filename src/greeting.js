@@ -15,7 +15,7 @@ function saveName(text) {
 function getTime(){
     const date = new Date();
     const time = date.getHours;
-    console.log(time);
+    //console.log(time);
 
     if(time >= 4 && time <= 10) {
         greetingText = 'Good Morning'
