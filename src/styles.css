@@ -1,7 +1,7 @@
 body {
     font-family: sans-serif;
     position: relative;
-    width: 100%;
+    /*width: 100%;*/
     height: 100vh;
     margin: 0;
     padding: 0;
@@ -107,7 +107,6 @@ li {
 }
 
 .finished-task-lists li {
-    color: blue;
     font-weight: 700;
 }
 
