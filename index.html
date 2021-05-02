@@ -8,30 +8,31 @@
 </head>
 <body>
     <div class= "container">
-        <div class="top-area">
+        <div class="geo-area">
+            <span class="local-weather"></span>
+        </div>
+        <div class="main-area">
             <div class="clock-area">
                 <h1>00:00:00</h1>
             </div>
             <form class="js-form form">
-                <input type="text" placeholder="what is your name?"></input>
+                <input type="text" placeholder="What is your name?"></input>
             </form>
-            <h4 class="js-greetings greetings"></h4>
+            <h5 class="js-greetings greetings"></h4>
             <h2>Task</h2>
             
             <form class="todo-form">
-                <input type="text" placeholder="Add Task"/>
+                <input type="text" placeholder="Write your work today here!"/>
             </form>
-            <h2>Pending</h2>
+            <h2 class="todo-list">Todo List</h2>
             <ul class="pending-task-lists"></ul>
-            <h2>Finished</h2>
+            <h2 class="done-list">Done List</h2>
             <ul class="finished-task-lists"></ul>
-        </div>
+        </div>        
         <div class="bottom-area">
-            <span class="local-weather"></span>
+            <span class="pic-location-name">test</span>
         </div>
     </div>
-    
-
     <script src="src/index.js"></script>
     <script src="src/greeting.js"></script>
     <script src="src/todo.js"></script>

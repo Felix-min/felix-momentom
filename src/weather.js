@@ -4,7 +4,7 @@ const API_KEY = '78789b85104f423a10f9af91e9565f5e'; //openweathermap.org
 const COORDS = 'coords';
 
 function paintWeather(cityName, cityTemp){
-    weather.innerText = cityName + " - " + cityTemp;
+    weather.innerText = cityTemp + "°C @" + cityName ;
 }
 
 function getWeather(lat, lon) {
